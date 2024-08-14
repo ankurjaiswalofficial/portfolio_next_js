@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .text-primary{
+    @apply text-orange-500;
+  }
+  .bg-primary{
+    @apply bg-orange-500;
+  }
+  .border-primary{
+    @apply border-orange-500;
+  }
+  .splide__slide.is-active.is-visible{
+    @apply opacity-100;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
