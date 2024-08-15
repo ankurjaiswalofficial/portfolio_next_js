@@ -8,7 +8,7 @@ export default function Testimonials() {
         <Section
             title={"Testimonials"}
             description={testimonialsParagraph}
-            className="max-w-full flex-1 bg-slate-200 overflow-hidden"
+            className="max-w-full "
         >
             <TestimonialsContent />
         </Section>

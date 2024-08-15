@@ -9,7 +9,7 @@ export default function Footer({ className }) {
     return (
         <footer
             className={cn(
-                "flex flex-col items-center justify-center gap-12 pt-16 bg-neutral-200/35",
+                "flex flex-col items-center justify-center gap-16 pt-16 bg-neutral-200/35",
                 className
             )}
         >

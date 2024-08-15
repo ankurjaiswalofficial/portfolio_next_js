@@ -29,7 +29,9 @@ function Carousel({ className, children }) {
                 trimSpace: false,
                 arrows: false,
                 drag: true,
-                pagination: false,
+                cloneStatus: false,
+                pagination: true,
+                paginationKeyboard: true,
                 autoScroll: {
                     speed: 1,
                 },
@@ -44,6 +46,7 @@ function Carousel({ className, children }) {
             <div className="splide__track">
                 <ul className={spliderStyles.list}>{children}</ul>
             </div>
+            <ul className="splide__pagination"></ul>
         </div>
     );
 }

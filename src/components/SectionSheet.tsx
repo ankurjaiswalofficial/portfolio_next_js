@@ -6,7 +6,7 @@ const SectionSheetStyles = {
     headerStyles: "flex flex-col items-center justify-center gap-8 py-2",
     headerTitleStyles: "text-6xl font-semibold",
     headerDescriptionStyles:
-        "text-lg w-10/12 md:w-7/12  text-wrap text-center",
+        "text-xl w-10/12 md:w-7/12  text-wrap text-center",
     contentStyles: "w-full h-fit my-4",
     footerStyles: "w-full flex items-center justify-end",
 };

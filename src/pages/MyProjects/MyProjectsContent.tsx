@@ -12,13 +12,6 @@ export default function MyProjectsContent({className}) {
       <MyProjectsCard />
       <MyProjectsCard />
       <MyProjectsCard />
-      <MyProjectsCard />
-      <MyProjectsCard />
-      <MyProjectsCard />
-      <MyProjectsCard />
-      <MyProjectsCard />
-      <MyProjectsCard />
-      <MyProjectsCard />
     </div>
   )
 }

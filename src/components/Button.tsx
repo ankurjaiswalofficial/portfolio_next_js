@@ -4,7 +4,7 @@ import React from "react";
 
 function Button({ className, children }) {
     return (
-        <button className={cn("p-1.5 px-3 rounded-md text-xl bg-primary text-white text-nowrap w-48 h-14", className)}>
+        <button className={cn("p-1.5 px-3 rounded-xl text-xl font-semibold bg-primary text-white text-nowrap w-48 h-14", className)}>
             {children}
         </button>
     );

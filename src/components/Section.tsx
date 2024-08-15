@@ -41,7 +41,7 @@ function Section({
     return (
         <SectionWrapper className={className}>
             <div
-                className={cn(
+                className={imgSrc && cn(
                     "w-full flex flex-row gap-14 items-center justify-center",
                     {"flex-row-reverse": (reverse)}
                 )}

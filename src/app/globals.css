@@ -10,11 +10,23 @@
   .bg-primary{
     @apply bg-orange-500;
   }
+  .hover\:bg-primary{
+    @apply bg-orange-500;
+  }
   .border-primary{
     @apply border-orange-500;
   }
   .splide__slide.is-active.is-visible{
     @apply opacity-100;
+  }
+  .splide__pagination {
+    @apply my-4;
+  } 
+  .splide__pagination li > button {
+    @apply w-[57px] h-[16px] px-4 hover:bg-primary rounded-xl;
+  }
+  .splide__pagination li > button.is-active{
+    @apply bg-primary opacity-100 scale-100;
   }
   .text-balance {
     text-wrap: balance;
