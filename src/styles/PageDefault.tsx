@@ -4,19 +4,19 @@ export const AboutMeContentStyles =
 export const ContactContentStyles = {
     formStyles: "flex flex-row flex-wrap lg:flex-nowrap items-center justify-center gap-4 md:px-48 py-6",
     inputStyles:
-        "text-xl bg-neutral-200/35 p-3.5 flex-grow rounded-xl border outline-none border-gray-200 xl:max-w-[38.75rem] h-[4.6875rem]",
+        "text-xl bg-neutral-200/35 dark:bg-neutral-200 text-black p-3.5 flex-grow rounded-xl border outline-none border-gray-200 xl:max-w-[38.75rem] h-[4.6875rem]",
     buttonStyles: "p-3 px-4 w-[13.875rem] h-[4.6875rem] font-semibold text-2xl",
 };
 
 export const CopyrightFooterStyles = {
     bodyStyles:
-        "w-full py-4 flex items-center justify-center bg-neutral-500 dark:bg-black text-white text-xl xl:h-[5.25rem]",
+        "w-full py-4 flex items-center justify-center bg-neutral-600 dark:bg-black text-white text-xl xl:h-[5.25rem]",
     hightLightStyles: "font-bold text-primary",
 };
 
 export const FooterStyles = {
     bodyStyles:
-        "flex flex-col items-center justify-center gap-16 pt-16 bg-neutral-200/35",
+        "flex flex-col items-center justify-center gap-16 pt-16 bg-neutral-200/35 dark:bg-neutral-900",
     navStyles: "gap-6",
 };
 
@@ -47,8 +47,8 @@ export const MyProjectContentStyles = {
         "w-full flex flex-row flex-wrap items-center justify-center gap-8",
     buttonStyles: {
         default:
-            "bg-gray-100/75 font-normal text-2xl w-fit px-6 border text-black border-neutral-400",
-        activeState: "bg-primary border-primary text-white",
+            "bg-gray-100/75 dark:bg-gray-100 font-normal text-2xl w-fit px-6 border text-black border-neutral-400",
+        activeState: "bg-primary dark:bg-primary border-primary text-white",
     },
     contentWrapperStyles: "flex flex-wrap gap-8 items-center justify-center",
 };

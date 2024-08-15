@@ -1,5 +1,6 @@
 export const BrandName = "Mumair";
 export const BrandLogoURL = "/img/logo.svg";
+export const BrandDarkLogoURL = "/img/logo-dark.svg";
 export const BrandResumeURL = "#resumeURL"
 export const HeroParagraph =
     "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra";

@@ -23,10 +23,10 @@
     @apply opacity-100;
   }
   .splide__pagination {
-    @apply my-4;
+    bottom: -2.5rem !important;
   } 
   .splide__pagination li > button {
-    @apply w-[57px] h-[16px] px-4 hover:bg-primary rounded-xl;
+    @apply w-[57px] h-[16px] px-4 bg-neutral-200/35 dark:bg-neutral-100 hover:bg-neutral-100 rounded-xl;
   }
   .splide__pagination li > button.is-active{
     @apply bg-primary opacity-100 scale-100;

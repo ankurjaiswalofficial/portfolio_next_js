@@ -3,8 +3,6 @@ import React from "react";
 import { Splide } from "@splidejs/splide";
 import { URLHash } from "@splidejs/splide-extension-url-hash";
 import "@splidejs/splide/css";
-import "@splidejs/splide/css/skyblue";
-import "@splidejs/splide/css/sea-green";
 import "@splidejs/splide/css/core";
 import { cn } from "@/utils/utils";
 import { CNCRProps } from "@/app/interfaces/common";
@@ -28,9 +26,7 @@ function Carousel({ className, children }: Readonly<CNCRProps>) {
                 trimSpace: false,
                 arrows: false,
                 drag: true,
-                cloneStatus: false,
                 pagination: true,
-                paginationKeyboard: true,
                 autoScroll: {
                     speed: 1,
                 },
@@ -40,7 +36,8 @@ function Carousel({ className, children }: Readonly<CNCRProps>) {
                         gap: "0.5rem",
                     },
                 },
-                gap: "1rem",
+                gap: "2rem",
+                padding: "0rem"
             });
             splide.mount({ URLHash });
             splide.go(1);

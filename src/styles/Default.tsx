@@ -1,5 +1,5 @@
 export const BrandLogoStyles = "w-72";
-export const SocialIconStyles = "text-black w-8";
+export const SocialIconStyles = "text-black w-8 dark:text-white dark:fill-white";
 export const ButtonStyles = {
     default:
         "p-1.5 px-3 rounded-xl text-xl font-semibold bg-primary text-white text-nowrap w-48 h-14 ",
@@ -13,7 +13,7 @@ export const ServiceCardStyles = {
         titleStyles: "text-3xl font-semibold",
         descriptionStyles: "text-xl",
         sheetStyles:
-            "aspect-square rounded-lg bg-neutral-100 p-4 flex flex-col items-start justify-center gap-6",
+            "min-w-[18.125rem] w-[20.375rem] aspect-square rounded-lg bg-neutral-100 text-black p-4 flex flex-col items-start justify-center gap-6",
     },
 };
 
@@ -68,7 +68,7 @@ export const SectionStyles = {
 
 export const TestimonialsCardStyles = {
     bodyStyles:
-        "relative flex-shrink-0 w-8/12 lg:w-9/12 xl:w-[67.9375rem] xl:h-[21.5] p-8 py-6 gap-8 rounded-xl flex flex-row items-center bg-neutral-200/35",
+        "relative flex-shrink-0 w-8/12 lg:w-9/12 xl:w-[67.9375rem] xl:h-[21.5] p-8 py-6 gap-8 rounded-xl flex flex-row items-center bg-neutral-200/35 dark:bg-neutral-200 text-black",
     imgWrapperStyles:
         "h-36 xl:h-[14.6875rem] aspect-square rounded-full bg-neutral-100",
     imageStyles:
