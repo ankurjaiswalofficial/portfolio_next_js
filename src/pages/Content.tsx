@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "@/components/Section";
-import { PageSectionsDefaultJSON } from "@/app/data/PageDefaultData";
+import { PageSectionsDefaultJSON } from "@/app/data/PageSequenceData";
 
 export default function Content() {
     return (
