@@ -24,11 +24,11 @@ function MyProjectsCard({
                     >
                         <Image
                             width={274}
-                            height={405}
+                            height={412}
                             alt={title}
                             src={img1Src}
                             className={cn(
-                                "w-auto h-auto",
+                                "lg:w-[274px] lg:h-[412px]",
                                 MyProjectsCardStyles.imageStyles.image1
                                     .imgStyles
                             )}
@@ -41,11 +41,11 @@ function MyProjectsCard({
                     >
                         <Image
                             width={274}
-                            height={405}
+                            height={489}
                             alt={title}
                             src={img2Src}
                             className={cn(
-                                "w-auto h-auto",
+                                "lg:w-[274px] lg:h-[489px]",
                                 MyProjectsCardStyles.imageStyles.image2
                                     .imgStyles
                             )}

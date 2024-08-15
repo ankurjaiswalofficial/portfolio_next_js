@@ -6,8 +6,12 @@ import { ContactContentStyles } from "@/styles/PageDefault";
 
 function ContactContent({ className }: Readonly<ClassNameProps>) {
     return (
-        <form className={cn(ContactContentStyles.formStyles, className)}>
+        <form
+            className={cn(ContactContentStyles.formStyles, className)}
+            id="contactForm"
+        >
             <input
+                id="userEmail"
                 type="email"
                 placeholder="Enter Your Email"
                 className={ContactContentStyles.inputStyles}

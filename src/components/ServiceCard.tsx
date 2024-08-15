@@ -63,7 +63,7 @@ function ServiceCard({
                     alt={""}
                     src={imgSrc}
                     className={cn(
-                        "w-auto h-auto",
+                        "lg:w-[80px] lg:h-[80px]",
                         ServiceCardStyles.imageStyles
                     )}
                 />
