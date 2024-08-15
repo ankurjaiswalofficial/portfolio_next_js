@@ -7,17 +7,14 @@ import "@splidejs/splide/css/skyblue";
 import "@splidejs/splide/css/sea-green";
 import "@splidejs/splide/css/core";
 import { cn } from "@/utils/utils";
+import { CNCRProps } from "@/app/interfaces/common";
+import { CarouselStyles } from "@/styles/Default";
 
-const spliderStyles = {
-    list: cn("splide__list"),
-    slide: cn("splide__slide", "px-4 opacity-30"),
-};
-
-function CarouselItem({ className, children }) {
-    return <li className={spliderStyles.slide}>{children}</li>;
+function CarouselItem({ className, children }: Readonly<CNCRProps>) {
+    return <li className={cn("splide_slide",CarouselStyles.itemStyles, className)}>{children}</li>;
 }
 
-function Carousel({ className, children }) {
+function Carousel({ className, children }: Readonly<CNCRProps>) {
     const splideRef = React.useRef<HTMLDivElement>(null);
     React.useEffect(() => {
         if (splideRef.current) {
@@ -44,7 +41,7 @@ function Carousel({ className, children }) {
     return (
         <div ref={splideRef} className={cn("splide", className)}>
             <div className="splide__track">
-                <ul className={spliderStyles.list}>{children}</ul>
+                <ul className={cn("splide__list", CarouselStyles.listStyles)}>{children}</ul>
             </div>
             <ul className="splide__pagination"></ul>
         </div>

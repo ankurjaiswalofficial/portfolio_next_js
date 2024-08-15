@@ -1,44 +1,20 @@
-import { cn } from "@/utils/utils";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import { cn } from "@/utils/utils";
+import { PageNavigationData } from "@/app/data/ComponentsDefault";
+import { ClassNameProps } from "@/app/interfaces/common";
+import { PageNavigationStyles } from "@/styles/Default";
 
-const pageNavLinkStyles = cn("text-xl hover:text-primary");
-const navigationLinks = [
-    {
-        label: "Home",
-        href: "#home",
-    },
-    {
-        label: "About Me",
-        href: "#about_me",
-    },
-    {
-        label: "Services",
-        href: "#services",
-    },
-    {
-        label: "Projects",
-        href: "#projects",
-    },
-    {
-        label: "Testimonials",
-        href: "#testimonals",
-    },
-    {
-        label: "Contact",
-        href: "#contact",
-    },
-];
-function PageNavigation({ className }) {
+function PageNavigation({ className }: Readonly<ClassNameProps>) {
     return (
         <nav
             className={cn(
-                "flex flex-row items-center justify-center gap-8 font-medium",
+                PageNavigationStyles.navStyles,
                 className
             )}
         >
-            {navigationLinks.map((link) => (
-                <Link key={link.label} href={link.href} className={pageNavLinkStyles}>
+            {PageNavigationData.map((link) => (
+                <Link key={link.label} href={link.href} className={PageNavigationStyles.linkStyles}>
                     {link.label}
                 </Link>
             ))}

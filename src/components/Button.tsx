@@ -1,19 +1,37 @@
-import { cn } from "@/utils/utils";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import { cn } from "@/utils/utils";
+import { ButtonProps, LinkButtonProps } from "@/app/interfaces/Component";
+import { ButtonStyles } from "@/styles/Default";
 
-function Button({ className, children }) {
+
+function Button({ className, children, onClick, disabled }: Readonly<ButtonProps>) {
     return (
-        <button className={cn("p-1.5 px-3 rounded-xl text-xl font-semibold bg-primary text-white text-nowrap w-48 h-14", className)}>
+        <button
+            onClick={onClick}
+            disabled={disabled}
+            className={cn(
+                ButtonStyles.default,
+                className,
+                disabled && ButtonStyles.disabled
+            )}
+        >
             {children}
         </button>
     );
 }
 
-function LinkButton({ href, className, children }) {
+function LinkButton({
+    href = "#",
+    className,
+    children,
+    disabled,
+}: Readonly<LinkButtonProps>) {
     return (
         <Link href={href}>
-            <Button className={className}>{children}</Button>
+            <Button className={className} disabled={disabled}>
+                {children}
+            </Button>
         </Link>
     );
 }

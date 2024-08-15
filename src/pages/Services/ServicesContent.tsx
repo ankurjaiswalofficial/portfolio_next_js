@@ -1,16 +1,23 @@
-import Card from '@/components/Card'
-import { cn } from '@/utils/utils'
-import React from 'react'
+import React from "react";
+import { cn } from "@/utils/utils";
+import { ServicesContentData } from "@/app/data/PageDefaultData";
+import { ClassNameProps } from "@/app/interfaces/common";
+import { ServicesContentStyles } from "@/styles/PageDefault";
+import ServiceCard from "@/components/ServiceCard";
 
-const dummyServicesParagraph = "Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum"
-
-export default function ServicesContent({className}) {
-  return (
-    <div className={cn("grid grid-cols-4 gap-8 items-center justify-center", className)}>
-      <Card title={"UI/UX"} description={dummyServicesParagraph} imgSrc={"/img/ui-ux.svg"} />
-      <Card title={"Web Design"} description={dummyServicesParagraph} imgSrc={"/img/web-design.svg"} />
-      <Card title={"App Design"} description={dummyServicesParagraph} imgSrc={"/img/app-design.svg"} />
-      <Card title={"Graphic Design"} description={dummyServicesParagraph} imgSrc={"/img/graphic-design.svg"} />
-    </div>
-  )
+export default function ServicesContent({ className }: Readonly<ClassNameProps>) {
+    return (
+        <div className={cn(ServicesContentStyles, className)}>
+            {ServicesContentData.map((val, index) => {
+                return (
+                    <ServiceCard
+                        key={"ServiceCard_" + String(index)}
+                        title={val.title}
+                        description={val.description}
+                        imgSrc={val.imgSrc}
+                    />
+                );
+            })}
+        </div>
+    );
 }

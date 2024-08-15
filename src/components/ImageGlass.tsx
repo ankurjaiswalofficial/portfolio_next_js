@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+import { ChildrenProps } from "@/app/interfaces/common";
+import { ImageGlassStyles } from "@/styles/Default";
 
-function ImageGlass() {
-  return (
-    <div className='h-20 w-[374px] bg-primary opacity-60 absolute top-20 left-[50%] translate-x-[-50%]'></div>
-  )
+function ImageGlass({ children }: Readonly<ChildrenProps>) {
+    return <div className={ImageGlassStyles}>{children}</div>;
 }
 
-export default ImageGlass
+export default ImageGlass;

@@ -1,32 +1,76 @@
-import {
-    SectionSheet,
-    SectionSheetHeader,
-    SectionSheetHeaderDescription,
-    SectionSheetHeaderTitle,
-    SectionSheetContent,
-    SectionSheetFooter,
-} from "@/components/SectionSheet";
+import React from "react";
 import { cn } from "@/utils/utils";
 import Image from "next/image";
-import React, { ReactNode } from "react";
 import ImageGlass from "./ImageGlass";
+import { CNCRProps } from "@/app/interfaces/common";
+import { SectionProps } from "@/app/interfaces/Component";
+import { SectionSheetStyles, SectionStyles } from "@/styles/Default";
 
-interface SectionProps {
-    title: string;
-    description: string;
-    children: ReactNode;
-    className?: string;
-    footerChildren?: ReactNode;
-    imgSrc?: string;
-    reverse?: boolean;
+function SectionSheet({ children, className }: Readonly<CNCRProps>) {
+    return (
+        <div className={cn(SectionSheetStyles.sheetStyles, className)}>
+            {children}
+        </div>
+    );
 }
 
-function SectionGraphics({ children, className }: SectionProps) {
-    return <div className={cn("w-auto h-fit", className)}>{children}</div>;
+function SectionSheetHeaderTitle({ children, className }: Readonly<CNCRProps>) {
+    return (
+        <h1 className={cn(SectionSheetStyles.titleStyles, className)}>
+            {children}
+        </h1>
+    );
 }
-// grid grid-cols-1 md:grid-cols-2 grid-flow-col
-function SectionWrapper({ children, className }: SectionProps) {
-    return <div className={cn("w-full max-w-[1400px] py-8 mb-8 mx-auto", className)}>{children}</div>;
+
+function SectionSheetHeaderDescription({
+    children,
+    className,
+}: Readonly<CNCRProps>) {
+    return (
+        <p className={cn(SectionSheetStyles.descriptionStyles, className)}>
+            {children}
+        </p>
+    );
+}
+
+function SectionSheetHeader({ children, className }: Readonly<CNCRProps>) {
+    return (
+        <div className={cn(SectionSheetStyles.headerStyles, className)}>
+            {children}
+        </div>
+    );
+}
+
+function SectionSheetContent({ children, className }: Readonly<CNCRProps>) {
+    return (
+        <div className={cn(SectionSheetStyles.contentStyles, className)}>
+            {children}
+        </div>
+    );
+}
+
+function SectionSheetFooter({ children, className }: Readonly<CNCRProps>) {
+    return (
+        <div className={cn(SectionSheetStyles.footerStyles, className)}>
+            {children}
+        </div>
+    );
+}
+
+function SectionSheetGraphics({ children, className }: Readonly<CNCRProps>) {
+    return (
+        <div className={cn(SectionSheetStyles.graphicStyles, className)}>
+            {children}
+        </div>
+    );
+}
+
+function SectionSheetWrapper({ children, className }: Readonly<CNCRProps>) {
+    return (
+        <div className={cn(SectionSheetStyles.wrapperStyles, className)}>
+            {children}
+        </div>
+    );
 }
 
 function Section({
@@ -36,57 +80,57 @@ function Section({
     children,
     footerChildren,
     className,
-    reverse=false
-}: SectionProps) {
+    reverse = false,
+}: Readonly<SectionProps>) {
     return (
-        <SectionWrapper className={className}>
+        <SectionSheetWrapper className={className}>
             <div
-                className={imgSrc && cn(
-                    "w-full flex flex-row gap-14 items-center justify-center",
-                    {"flex-row-reverse": (reverse)}
-                )}
+                className={
+                    (imgSrc &&
+                        cn(
+                            SectionStyles.wrapperInnerStyles.default,
+                            reverse && SectionStyles.wrapperInnerStyles.reverse
+                        )) ??
+                    ""
+                }
             >
                 {imgSrc && (
-                    <SectionGraphics className="relative">
+                    <SectionSheetGraphics>
                         <Image
                             alt={""}
                             width={1362}
                             height={1364}
                             src={imgSrc}
-                            className={cn(
-                                "max-w-[620px] object-contain aspect-square mb-4"
-                            )}
+                            className={SectionStyles.imageStyles}
                         />
                         <ImageGlass />
                         {footerChildren && (
-                            <SectionSheetFooter className="items-center justify-center">
+                            <SectionSheetFooter
+                                className={SectionStyles.footerStyles}
+                            >
                                 {footerChildren}
                             </SectionSheetFooter>
                         )}
-                    </SectionGraphics>
+                    </SectionSheetGraphics>
                 )}
-                <SectionSheet className={cn({"flex-1" : (imgSrc ? true : false)})}>
+                <SectionSheet
+                    className={cn(imgSrc && SectionStyles.sheetStyles)}
+                >
                     {title && description && (
                         <SectionSheetHeader
-                            className={cn({
-                                "items-start justify-start": imgSrc
-                                    ? true
-                                    : false,
-                            })}
+                            className={cn(imgSrc && SectionStyles.headerStyles)}
                         >
                             <SectionSheetHeaderTitle
-                                className={cn({
-                                    "text-start": imgSrc ? true : false,
-                                })}
+                                className={cn(
+                                    imgSrc && SectionStyles.titleStyles
+                                )}
                             >
                                 {title}
                             </SectionSheetHeaderTitle>
                             <SectionSheetHeaderDescription
-                                className={cn({
-                                    "text-start xl:w-full lg:pr-2": imgSrc
-                                        ? true
-                                        : false,
-                                })}
+                                className={cn(
+                                    imgSrc && SectionStyles.descriptionStyles
+                                )}
                             >
                                 {description}
                             </SectionSheetHeaderDescription>
@@ -98,8 +142,17 @@ function Section({
             {!imgSrc && footerChildren && (
                 <SectionSheetFooter>{footerChildren}</SectionSheetFooter>
             )}
-        </SectionWrapper>
+        </SectionSheetWrapper>
     );
 }
-export { SectionGraphics, SectionWrapper, SectionProps };
+export {
+    SectionSheet,
+    SectionSheetGraphics,
+    SectionSheetWrapper,
+    SectionSheetHeader,
+    SectionSheetHeaderTitle,
+    SectionSheetHeaderDescription,
+    SectionSheetContent,
+    SectionSheetFooter,
+};
 export default Section;
