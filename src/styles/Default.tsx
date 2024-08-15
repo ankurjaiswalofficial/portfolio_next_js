@@ -23,13 +23,13 @@ export const CarouselStyles = {
 };
 
 export const ImageGlassStyles =
-    "h-20 w-[374px] bg-primary opacity-60 absolute top-20 left-[50%] translate-x-[-50%]";
+    "h-20 w-[23.375rem] bg-primary opacity-60 absolute top-20 left-[50%] translate-x-[-50%]";
 
 export const ProgressStyles = {
     bodyStyles: "h-3 w-full bg-neutral-200 rounded-lg",
     indicatorStyles: "relative h-full bg-primary rounded-lg min-w-0",
     dotStyles:
-        "absolute right-0 top-[50%] translate-y-[-50%] w-8 h-8 rounded-full bg-neutral-200 border-[3px] border-primary",
+        "absolute right-0 top-[50%] translate-y-[-50%] w-8 h-8 rounded-full bg-neutral-200 border-[0.1875rem] border-primary",
 };
 
 export const LabelledProgressStyles = {
@@ -58,7 +58,7 @@ export const SectionStyles = {
         default: "w-full flex flex-row gap-14 items-center justify-center",
         reverse: "flex-row-reverse",
     },
-    imageStyles: "max-w-[620px] object-contain aspect-square mb-4",
+    imageStyles: "max-w-[38.75rem] object-contain aspect-square mb-4",
     footerStyles: "items-center justify-center",
     sheetStyles: { imgSrc: "flex-1" },
     headerStyles: { imgSrc: "items-start justify-start" },
@@ -68,11 +68,11 @@ export const SectionStyles = {
 
 export const TestimonialsCardStyles = {
     bodyStyles:
-        "relative flex-shrink-0 w-8/12 lg:w-9/12 xl:w-[1087px] xl:h-[344px] p-8 py-6 gap-8 rounded-xl flex flex-row items-center bg-neutral-200/35",
+        "relative flex-shrink-0 w-8/12 lg:w-9/12 xl:w-[67.9375rem] xl:h-[21.5] p-8 py-6 gap-8 rounded-xl flex flex-row items-center bg-neutral-200/35",
     imgWrapperStyles:
-        "h-36 xl:h-[235px] aspect-square rounded-full bg-neutral-100",
+        "h-36 xl:h-[14.6875rem] aspect-square rounded-full bg-neutral-100",
     imageStyles:
-        "h-36 xl:h-[235px] aspect-square object-contain overflow-hidden rounded-full bg-neutral-100",
+        "h-36 xl:h-[14.6875rem] aspect-square object-contain overflow-hidden rounded-full bg-neutral-100",
     contentWrapperStyles:
         "flex flex-col flex-grow items-center justify-start gap-4",
     descriptionStyles: "text-xl font-normal text-start w-full",
@@ -86,18 +86,18 @@ export const TestimonialsCardStyles = {
 
 
 export const MyProjectsCardStyles = {
-    bodyStyles: "flex flex-col items-start justify-start h-[601px] w-[445px] gap-6",
+    bodyStyles: "flex flex-col items-start justify-start h-[37.5625rem] w-[27.8125rem] gap-6",
     imageWrapperStyles: {
-        wrapper1: "px-4 h-[489px] w-[445px] rounded-lg bg-orange-100",
+        wrapper1: "px-4 h-[30.5625rem] w-[27.8125rem] rounded-lg bg-orange-100",
         wrapper2: "relative mx-auto flex flex-row justify-between w-11/12",
     },
     imageStyles: {
         image1: {
-            wrapper: "w-[274px] h-[405px]",
+            wrapper: "w-[17.125rem] h-[25.3125rem]",
             imgStyles: "absolute bottom-0 left-0 z-10",
         },
         image2: {
-            wrapper: "w-[274px] h-[489px]",
+            wrapper: "w-[17.125rem] h-[30.5625rem]",
             imgStyles: "absolute bottom-0 right-0 hover:z-20",
         },
     },

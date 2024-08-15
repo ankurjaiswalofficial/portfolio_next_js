@@ -4,6 +4,9 @@
 
 
 @layer utilities {
+  :root{
+    @apply text-[8px] sm:text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px]
+  }
   .text-primary{
     @apply text-orange-500;
   }
