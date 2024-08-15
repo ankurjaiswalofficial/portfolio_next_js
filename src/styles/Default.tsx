@@ -93,11 +93,11 @@ export const MyProjectsCardStyles = {
     },
     imageStyles: {
         image1: {
-            wrapper: "w-[274px] h-[405px]", 
+            wrapper: "w-[274px] h-[405px]",
             imgStyles: "absolute bottom-0 left-0 z-10",
         },
         image2: {
-            wrapper: "w-[274px] h-[489px]", 
+            wrapper: "w-[274px] h-[489px]",
             imgStyles: "absolute bottom-0 right-0 hover:z-20",
         },
     },
