@@ -11,13 +11,15 @@ import { CNCRProps } from "@/app/interfaces/common";
 import { CarouselStyles } from "@/styles/Default";
 
 function CarouselItem({ className, children }: Readonly<CNCRProps>) {
-    return <li className={cn("splide__slide",CarouselStyles.itemStyles, className)}>{children}</li>;
+    return <li className={cn("splide__slide", CarouselStyles.itemStyles, className)}>{children}</li>;
 }
 
 function Carousel({ className, children }: Readonly<CNCRProps>) {
     const splideRef = React.useRef<HTMLDivElement>(null);
+    const splideInstance = React.useRef<Splide | null>(null);
+
     React.useEffect(() => {
-        if (splideRef.current) {
+        if (splideRef.current && !splideInstance.current) {
             const splide = new Splide(splideRef.current, {
                 autoWidth: true,
                 perPage: 3,
@@ -32,12 +34,25 @@ function Carousel({ className, children }: Readonly<CNCRProps>) {
                 autoScroll: {
                     speed: 1,
                 },
+                breakpoints: {
+                    900: {
+                        perPage: 1,
+                        gap: "0.5rem",
+                    },
+                },
                 gap: "1rem",
             });
             splide.mount({ URLHash });
-            splide.go(1)
+            splide.go(1);
+            splideInstance.current = splide;
         }
-    }, [splideRef]);
+
+        return () => {
+            splideInstance.current?.destroy();
+            splideInstance.current = null;
+        };
+    }, []);
+
     return (
         <div ref={splideRef} className={cn("splide", className)}>
             <div className="splide__track">
