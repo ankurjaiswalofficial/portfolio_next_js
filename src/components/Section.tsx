@@ -118,18 +118,18 @@ function Section({
                 >
                     {title && description && (
                         <SectionSheetHeader
-                            className={cn(imgSrc && SectionStyles.headerStyles)}
+                            className={cn(imgSrc && SectionStyles.headerStyles.imgSrc)}
                         >
                             <SectionSheetHeaderTitle
                                 className={cn(
-                                    imgSrc && SectionStyles.titleStyles
+                                    imgSrc && SectionStyles.titleStyles.imgSrc
                                 )}
                             >
                                 {title}
                             </SectionSheetHeaderTitle>
                             <SectionSheetHeaderDescription
                                 className={cn(
-                                    imgSrc && SectionStyles.descriptionStyles
+                                    imgSrc && SectionStyles.descriptionStyles.imgSrc
                                 )}
                             >
                                 {description}

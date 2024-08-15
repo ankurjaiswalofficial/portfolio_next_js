@@ -23,7 +23,10 @@ function ServiceCardSheetTitle({ children, className }: Readonly<CNCRProps>) {
         </h1>
     );
 }
-function ServiceCardSheetDescription({ children, className }: Readonly<CNCRProps>) {
+function ServiceCardSheetDescription({
+    children,
+    className,
+}: Readonly<CNCRProps>) {
     return (
         <p
             className={cn(
@@ -46,7 +49,11 @@ function ServiceCardSheet({ className, children }: Readonly<CNCRProps>) {
     );
 }
 
-function ServiceCard({ title, description, imgSrc }: Readonly<ServiceCardProps>) {
+function ServiceCard({
+    title,
+    description,
+    imgSrc,
+}: Readonly<ServiceCardProps>) {
     return (
         <ServiceCardSheet>
             <ServiceCardSheetImage>
@@ -55,7 +62,10 @@ function ServiceCard({ title, description, imgSrc }: Readonly<ServiceCardProps>)
                     height={80}
                     alt={""}
                     src={imgSrc}
-                    className={ServiceCardStyles.imageStyles}
+                    className={cn(
+                        "w-auto h-auto",
+                        ServiceCardStyles.imageStyles
+                    )}
                 />
             </ServiceCardSheetImage>
             <ServiceCardSheetTitle>{title}</ServiceCardSheetTitle>

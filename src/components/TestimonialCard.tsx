@@ -20,7 +20,10 @@ function TestimonialCard({
                             width={1920}
                             height={1080}
                             alt=""
-                            className={TestimonialsCardStyles.imageStyles}
+                            className={cn(
+                                "w-auto h-auto",
+                                TestimonialsCardStyles.imageStyles
+                            )}
                             src={imgSrc}
                         />
                     )}
