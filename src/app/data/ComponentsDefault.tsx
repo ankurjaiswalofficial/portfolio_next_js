@@ -26,7 +26,7 @@ export const PageNavigationData = [
     },
     {
         label: "About Me",
-        href: "#about_me",
+        href: "#about",
     },
     {
         label: "Services",
@@ -38,7 +38,7 @@ export const PageNavigationData = [
     },
     {
         label: "Testimonials",
-        href: "#testimonals",
+        href: "#testimonials",
     },
     {
         label: "Contact",

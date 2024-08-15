@@ -8,4 +8,8 @@ export interface ChildrenProps {
     readonly children?: ReactNode;
 }
 
-export interface CNCRProps extends ClassNameProps, ChildrenProps{}
+export interface CNCRProps extends ClassNameProps, ChildrenProps {}
+
+export interface CNCRIDProps extends CNCRProps {
+    id?: string;
+}

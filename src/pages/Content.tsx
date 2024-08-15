@@ -9,6 +9,7 @@ export default function Content() {
                 return (
                     <Section
                         key={"PageSection_" + String(index)}
+                        id={val.id}
                         title={val.title}
                         description={val.description}
                         imgSrc={val.imgSrc ?? null}

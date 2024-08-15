@@ -19,7 +19,7 @@ export const ServiceCardStyles = {
 
 export const CarouselStyles = {
     listStyles: "",
-    itemStyles: "px-4 opacity-30",
+    itemStyles: "opacity-30",
 };
 
 export const ImageGlassStyles =
@@ -68,14 +68,14 @@ export const SectionStyles = {
 
 export const TestimonialsCardStyles = {
     bodyStyles:
-        "relative flex-shrink-0 w-8/12 lg:w-9/12 xl:w-[1087px] xl:h-[344px] p-8 py-6 gap-8 rounded-lg flex flex-row items-center bg-neutral-200/35",
+        "relative flex-shrink-0 w-8/12 lg:w-9/12 xl:w-[1087px] xl:h-[344px] p-8 py-6 gap-8 rounded-xl flex flex-row items-center bg-neutral-200/35",
     imgWrapperStyles:
         "h-36 xl:h-[235px] aspect-square rounded-full bg-neutral-100",
     imageStyles:
         "h-36 xl:h-[235px] aspect-square object-contain overflow-hidden rounded-full bg-neutral-100",
     contentWrapperStyles:
         "flex flex-col flex-grow items-center justify-start gap-4",
-    descriptionStyles: "text-xl font-normal",
+    descriptionStyles: "text-xl font-normal text-start w-full",
     leftQuoteStyles: "text-primary text-3xl font-bold -ml-4 pr-1 inline-block",
     rightQuoteStyles:
         "text-primary text-3xl font-bold pt-3 pl-1 inline-block absolute",

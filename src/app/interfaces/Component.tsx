@@ -33,6 +33,7 @@ export interface LabelledProgressProps {
     percent?: number | string;
 }
 export interface SectionProps {
+    id?: string;
     title: string;
     description: string;
     children: ReactNode;

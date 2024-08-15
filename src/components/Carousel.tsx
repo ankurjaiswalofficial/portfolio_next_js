@@ -11,7 +11,7 @@ import { CNCRProps } from "@/app/interfaces/common";
 import { CarouselStyles } from "@/styles/Default";
 
 function CarouselItem({ className, children }: Readonly<CNCRProps>) {
-    return <li className={cn("splide_slide",CarouselStyles.itemStyles, className)}>{children}</li>;
+    return <li className={cn("splide__slide",CarouselStyles.itemStyles, className)}>{children}</li>;
 }
 
 function Carousel({ className, children }: Readonly<CNCRProps>) {

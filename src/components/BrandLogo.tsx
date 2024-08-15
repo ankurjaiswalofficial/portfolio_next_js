@@ -10,6 +10,7 @@ function BrandLogo({className}: Readonly<ClassNameProps>) {
         <Image
             width={1920}
             height={1080}
+            priority={true}
             alt={BrandName}
             src={BrandLogoURL}
             className={cn(BrandLogoStyles, className)}

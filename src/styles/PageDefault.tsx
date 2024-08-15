@@ -38,6 +38,7 @@ export const HomeContentStyles = {
 
 export const ServicesContentStyles =
     "grid grid-cols-4 gap-8 items-center justify-center";
+    
 export const TestimonialsContentStyles = "w-full";
 
 export const MyProjectContentStyles = {

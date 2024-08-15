@@ -183,6 +183,7 @@ export const MyProjectsJSON: MyProjectFieldProps[] = [
 
 export const PageSectionsDefaultJSON = [
     {
+        id: "home",
         title: "",
         description: "",
         imgSrc: "/img/img1.png",
@@ -191,28 +192,33 @@ export const PageSectionsDefaultJSON = [
         children: <HomeContent />,
     },
     {
+        id: "about",
         title: "About Me",
         description: AboutMeParagraph,
         imgSrc: "/img/img2.png",
         children: <AboutMeContent />,
     },
     {
+        id: "services",
         title: "Services",
         description: ServicesParagraph,
         children: <ServicesContent />,
     },
     {
+        id: "projects",
         title: "My Projects",
         description: MyProjectsParagraph,
         children: <MyProjectsContent />,
     },
     {
+        id: "testimonials",
         title: "Testimonials",
         description: TestimonialsParagraph,
         className: "max-w-full",
         children: <TestimonialsContent />,
     },
     {
+        id: "contact",
         title: "Lets Design Together",
         description: LetsDesignTogetherParagraph,
         className: "mb-6",

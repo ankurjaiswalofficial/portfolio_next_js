@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/utils/utils";
 import Image from "next/image";
 import ImageGlass from "./ImageGlass";
-import { CNCRProps } from "@/app/interfaces/common";
+import { CNCRIDProps, CNCRProps } from "@/app/interfaces/common";
 import { SectionProps } from "@/app/interfaces/Component";
 import { SectionSheetStyles, SectionStyles } from "@/styles/Default";
 
@@ -65,15 +65,16 @@ function SectionSheetGraphics({ children, className }: Readonly<CNCRProps>) {
     );
 }
 
-function SectionSheetWrapper({ children, className }: Readonly<CNCRProps>) {
+function SectionSheetWrapper({ children, className, id }: Readonly<CNCRIDProps>) {
     return (
-        <div className={cn(SectionSheetStyles.wrapperStyles, className)}>
+        <div id={id} className={cn(SectionSheetStyles.wrapperStyles, className)}>
             {children}
         </div>
     );
 }
 
 function Section({
+    id,
     title,
     description,
     imgSrc,
@@ -83,7 +84,7 @@ function Section({
     reverse = false,
 }: Readonly<SectionProps>) {
     return (
-        <SectionSheetWrapper className={className}>
+        <SectionSheetWrapper className={className} id={id}>
             <div
                 className={
                     (imgSrc &&
@@ -114,7 +115,7 @@ function Section({
                     </SectionSheetGraphics>
                 )}
                 <SectionSheet
-                    className={cn(imgSrc && SectionStyles.sheetStyles)}
+                    className={cn(imgSrc && SectionStyles.sheetStyles.imgSrc)}
                 >
                     {title && description && (
                         <SectionSheetHeader
