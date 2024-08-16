@@ -30,12 +30,13 @@ function Carousel({ className, children }: Readonly<CNCRProps>) {
                 autoScroll: {
                     speed: 1,
                 },
-                breakpoints: {
-                    900: {
-                        perPage: 1,
-                        gap: "0.5rem",
-                    },
-                },
+                // breakpoints: {
+                //     900: {
+                //         perPage: 1,
+                //         perMove: 1,
+                //         gap: "0.5rem",
+                //     },
+                // },
                 gap: "2rem",
                 padding: "0rem"
             });

@@ -2,9 +2,9 @@ export const AboutMeContentStyles =
     "flex flex-col items-start justify-start w-full h-fit gap-4";
 
 export const ContactContentStyles = {
-    formStyles: "flex flex-row flex-wrap lg:flex-nowrap items-center justify-center gap-4 md:px-48 py-6",
+    formStyles: "flex flex-col lg:flex-row flex-wrap lg:flex-nowrap items-center justify-center gap-4 md:px-48 py-6",
     inputStyles:
-        "text-xl bg-neutral-200/35 dark:bg-neutral-200 text-black p-3.5 flex-grow rounded-xl border outline-none border-gray-200 xl:max-w-[38.75rem] h-[4.6875rem]",
+        "text-xl bg-neutral-200/35 dark:bg-neutral-200 text-black p-3.5 flex-grow rounded-xl border outline-none border-gray-200 min-w-[80%] md:min-w-[60%] lg:w-[38.75rem] h-[4.6875rem]",
     buttonStyles: "p-3 px-4 w-[13.875rem] h-[4.6875rem] font-semibold text-2xl",
 };
 
@@ -28,7 +28,7 @@ export const HeaderStyles = {
 };
 
 export const HomeContentStyles = {
-    bodyStyles: "flex flex-col items-start justify-start pl-12",
+    bodyStyles: "flex flex-col items-start justify-start lg:pl-12",
     wishStyles: "text-lg font-semibold",
     nameStyles: "text-2xl font-semibold text-primary",
     profession1Styles: "text-8xl font-bold",
